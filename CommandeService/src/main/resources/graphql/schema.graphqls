@@ -1,0 +1,15 @@
+type Commande {
+  id: ID
+  produitId: ID
+  quantite: Int
+  totalPrix: Float
+  dateCommande: String
+}
+
+type Query {
+  commandes: [Commande]
+}
+
+type Mutation {
+  creerCommande(produitId: ID, quantite: Int, totalPrix: Float): Commande
+}
